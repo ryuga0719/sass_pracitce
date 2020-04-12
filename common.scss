@@ -1,0 +1,33 @@
+@import"settings";
+
+.navigation {
+  width: 100%;
+  border:1px solid $red;
+  & ul {
+    @include menuFlex;
+    @include flexAround;
+    & li {
+      background-color: $blue;
+      & a {
+        color:$white;
+      }
+    }
+  }
+}
+
+.navBlock {
+  width: 100%;
+  margin-top:40px;
+  border:1px solid $blue;
+  &__ul {
+    @include menuFlex;
+    @include flexBetween;
+    padding:10px;
+    &__li {
+      background-color: $grey;
+      & a {
+        color:$white;
+      }
+    }
+  }
+}
