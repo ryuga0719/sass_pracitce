@@ -31,3 +31,47 @@
     }
   }
 }
+.circleFlex {
+  @include menuFlex;
+  @include flexAround;
+}
+
+.circle {
+  @include circleMixin($blue,200px);
+  &:hover {
+    background: lighten($blue, 30%);
+  }
+}
+
+.circle_2 {
+  @include circleMixin($grey,40px);
+  &:hover {
+    // mix(color1,color2.mixed persentage)
+    background: mix($blue,red,50%);
+  }
+}
+
+.circle_3 {
+  @include circleMixin(lightgreen,28px);
+  &:hover {
+    background: darken(lightgreen,30%);
+  }
+}
+
+.circle_4 {
+  @include circleMixin(yellow,120px);
+  &:hover {
+    // グレースケール変換
+    background: grayscale(yellow);
+  }
+}
+
+.circle_5 {
+  @include circleMixin(purple);
+  &:hover {
+    // 補色を返す
+    background: complement(purple);
+  }
+}
+
+// その他,min,max,floor,ceil,absなどの基本的な関数も使える。

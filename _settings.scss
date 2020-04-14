@@ -31,3 +31,10 @@ align-items:center;
   -ms-flex-pack:distribute;
   justify-content:space-around;
 }
+
+@mixin circleMixin($color:red,$dir:150px ){
+  width:$dir;
+  height:$dir;
+  background:$color;
+  border-radius: 50%;
+}
